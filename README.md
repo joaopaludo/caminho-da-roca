@@ -18,7 +18,6 @@ O **Caminho da Roça** é um aplicativo desenvolvido com o objetivo de conectar 
 - **IDE**: **Visual Studio Code** - Uma das IDEs mais populares, oferece extensões poderosas para desenvolvimento em JavaScript/TypeScript e integração com GitHub.
 
 ## 📦 Estrutura do projeto
-- `frontend/`: Código do aplicativo React Native.
 - `database/`: Scripts do banco de dados PostgreSQL.
 - `docs/`: Documentação do projeto: diagramas UML e definições de requisitos.
 
