@@ -1,9 +1,11 @@
 # Caminho da Roça
 
 ## 📄 Descrição do projeto
+
 O **Caminho da Roça** é um aplicativo desenvolvido com o objetivo de conectar produtores locais da região oeste de Santa Catarina com consumidores interessados em produtos frescos e de qualidade. A plataforma facilita a comercialização direta entre produtores e consumidores, oferecendo uma alternativa conveniente para a compra de produtos agrícolas e promovendo a economia regional.
 
 ## ⚙️ Funcionalidades principais
+
 - **Cadastro de Produtores, Consumidores e Cooperativas**: Permite o registro de diferentes perfis de usuários, como produtores locais, consumidores e cooperativas responsáveis pelo frete.
 - **Catálogo de Produtos**: Produtores podem adicionar, editar e remover produtos com detalhes como nome, descrição, preço, disponibilidade e imagens.
 - **Gestão de Pedidos**: Consumidores podem navegar pelo catálogo, adicionar produtos ao carrinho, realizar pedidos e efetuar pagamentos de forma segura.
@@ -11,6 +13,7 @@ O **Caminho da Roça** é um aplicativo desenvolvido com o objetivo de conectar 
 - **Login e Autenticação**: Implementa um sistema seguro de autenticação, garantindo que apenas usuários autorizados possam acessar o aplicativo.
 
 ## 🛠️ Tecnologias utilizadas
+
 - **Banco de Dados**: **PostgreSQL** - Escolhido pela sua robustez, escalabilidade e por ser uma excelente opção de banco de dados relacional para projetos que exigem confiabilidade.
 - **Linguagem de Programação**: **TypeScript** - Oferece tipagem estática, o que aumenta a segurança do código e facilita a manutenção do projeto.
 - **Framework do App**: **React Native** - Escolhido para possibilitar o desenvolvimento de um aplicativo mobile nativo com uma única base de código, garantindo uma boa experiência de usuário tanto em iOS quanto em Android.
@@ -21,7 +24,7 @@ O **Caminho da Roça** é um aplicativo desenvolvido com o objetivo de conectar 
 - `database/`: Scripts do banco de dados PostgreSQL.
 - `docs/`: Documentação do projeto: diagramas UML e definições de requisitos.
 
-##  👥  Autores
+## 👥 Autores
 
 <table>
     <tr>        
