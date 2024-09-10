@@ -6,7 +6,7 @@ CREATE TABLE tipo_usuario (
     tipo VARCHAR(20) UNIQUE NOT NULL
 );
 
-INSERT INTO tipo_usuario (tipo) VALUES ('produtor'), ('consumidor'), ('cooperativa');
+INSERT INTO tipo_usuario (tipo) VALUES ('administrador'), ('produtor'), ('consumidor'), ('cooperativa');
 
 CREATE TABLE usuario (
     id SERIAL PRIMARY KEY,
