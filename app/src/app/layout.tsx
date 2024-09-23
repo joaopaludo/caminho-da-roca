@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Button } from "@/components/ui/button";
+import { SearchIcon, ShoppingBagIcon } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,6 +32,27 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-neutral-100 text-gray-800 antialiased`}
       >
+        <header className="sticky top-0 z-10 bg-white shadow-sm">
+          <div className="flex items-center justify-between p-4">
+            <Link href="/">
+              <h1 className="text-xl font-bold">Caminho da Roça</h1>
+            </Link>
+            <Button size="icon" variant="ghost">
+              <ShoppingBagIcon className="h-6 w-6" />
+              <span className="sr-only">Carrinho</span>
+            </Button>
+          </div>
+          <div className="px-4 pb-4">
+            <div className="relative">
+              <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-800" />
+              <Input
+                className="pl-8"
+                placeholder="Buscar produtos..."
+                type="search"
+              />
+            </div>
+          </div>
+        </header>
         {children}
       </body>
     </html>
