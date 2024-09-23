@@ -41,33 +41,35 @@ export default async function Component() {
           <h2 className="mb-2 text-lg font-semibold">Produtos em destaque</h2>
           <div className="grid grid-cols-2 gap-4">
             {featuredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="overflow-hidden rounded-lg bg-white shadow"
-              >
-                <img
-                  alt={product.descricao}
-                  className="h-48 w-full object-cover"
-                  height="200"
-                  src={product.imagem}
-                  style={{
-                    aspectRatio: "200/200",
-                    objectFit: "cover",
-                  }}
-                  width="200"
-                />
-                <div className="p-4">
-                  <h3 className="font-semibold">{product.descricao}</h3>
-                  <p className="text-sm text-gray-800">
-                    {product.preco.toLocaleString("pt-BR", {
-                      style: "currency",
-                      currency: "BRL",
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 2,
-                    })}
-                  </p>
+              <Link href={`/produto/${product.id}`} key={product.id}>
+                <div
+                  key={product.id}
+                  className="overflow-hidden rounded-lg bg-white shadow"
+                >
+                  <img
+                    alt={product.descricao}
+                    className="h-48 w-full object-cover"
+                    height="200"
+                    src={product.imagem}
+                    style={{
+                      aspectRatio: "200/200",
+                      objectFit: "cover",
+                    }}
+                    width="200"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-semibold">{product.descricao}</h3>
+                    <p className="text-sm text-gray-800">
+                      {product.preco.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

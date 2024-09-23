@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Heart } from "lucide-react";
 import { Product } from "@/lib/types";
@@ -14,12 +13,16 @@ export default async function SingleProductView(props: {
     <div className="container mx-auto px-4 py-8">
       <div className="grid gap-8 md:grid-cols-2">
         <div className="space-y-4">
-          <Image
+          <img
+            alt={product.nome}
+            className="mb-4 h-48 w-full rounded object-cover"
+            height="500"
             src={product.imagem}
-            alt={product.descricao}
-            width={500}
-            height={500}
-            className="w-full rounded-lg shadow-lg"
+            style={{
+              aspectRatio: "500/500",
+              objectFit: "contain",
+            }}
+            width="500"
           />
         </div>
         <div className="space-y-6">
