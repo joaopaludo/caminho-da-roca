@@ -15,7 +15,7 @@ export default async function SingleProductView(props: {
       <div className="grid gap-8 md:grid-cols-2">
         <div className="space-y-4">
           <Image
-            src="/placeholder.svg"
+            src={product.imagem}
             alt={product.descricao}
             width={500}
             height={500}

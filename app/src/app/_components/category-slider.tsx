@@ -28,10 +28,10 @@ const CategorySlider = async (props: {
                     alt={product.descricao}
                     className="h-[100px] w-full rounded-t-lg object-cover"
                     height="100"
-                    src={`/placeholder.svg?height=100&width=150`}
+                    src={product.imagem}
                     style={{
                       aspectRatio: "150/100",
-                      objectFit: "cover",
+                      objectFit: "contain",
                     }}
                     width="150"
                   />

@@ -9,9 +9,12 @@ export default async function Component() {
     "http://localhost:3001/categoria"
   ).then((res) => res.json());
 
+  console.log(categories);
+
   const featuredProducts: Product[] = await fetch(
     "http://localhost:3001/produto?disponibilidade=true&limit=4"
   ).then((res) => res.json());
+  console.log(featuredProducts);
 
   return (
     <div className="flex h-screen flex-col bg-neutral-100 text-gray-800">

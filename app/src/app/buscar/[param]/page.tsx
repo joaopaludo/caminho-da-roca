@@ -1,18 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ChevronLeft } from "lucide-react";
-import { Category, Product } from "@/lib/types";
+import { Product } from "@/lib/types";
 import Link from "next/link";
 
 export default async function CategoryProducts(props: {
-  params: { id: string };
+  params: { param: string };
 }) {
-  const category: Category = await fetch(
-    `http://localhost:3001/categoria/${props.params.id}`
-  ).then((res) => res.json());
-
   const products: Product[] = await fetch(
-    `http://localhost:3001/produto?idCategoria_eq=${props.params.id}`
+    `http://localhost:3001/produto?descricao_like=${props.params.param}`
   ).then((res) => res.json());
 
   return (
@@ -22,7 +18,7 @@ export default async function CategoryProducts(props: {
           <Link href="/">
             <div className="container mx-auto flex items-center px-4 py-4">
               <ChevronLeft className="mr-2 h-6 w-6" />
-              {category.nome}
+              Busca - {decodeURI(props.params.param)}
             </div>
           </Link>
         </div>
@@ -39,7 +35,7 @@ export default async function CategoryProducts(props: {
                       src={product.imagem}
                       style={{
                         aspectRatio: "300/200",
-                        objectFit: "cover",
+                        objectFit: "contain",
                       }}
                       width="300"
                     />

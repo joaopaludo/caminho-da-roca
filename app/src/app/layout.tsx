@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
-import { SearchIcon, ShoppingBagIcon } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { ShoppingBagIcon } from "lucide-react";
 import Link from "next/link";
+import SearchBar from "./_components/searchbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,16 +42,8 @@ export default function RootLayout({
               <span className="sr-only">Carrinho</span>
             </Button>
           </div>
-          <div className="px-4 pb-4">
-            <div className="relative">
-              <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-800" />
-              <Input
-                className="pl-8"
-                placeholder="Buscar produtos..."
-                type="search"
-              />
-            </div>
-          </div>
+
+          <SearchBar />
         </header>
         {children}
       </body>
